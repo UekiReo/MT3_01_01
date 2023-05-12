@@ -70,7 +70,7 @@ Matrix4x4 MakeOrthographicMatrix(float left, float top, float right, float botto
 
 	result.m[2][0] = 0.0f;
 	result.m[2][1] = 0.0f;
-	result.m[2][2] = (farClip - nearClip) / 1.0f;
+	result.m[2][2] = 1.0f/(farClip - nearClip);
 	result.m[2][3] = 0.0f;
 
 	result.m[3][0] = (left + right) / (left - right);
